@@ -1,0 +1,156 @@
+site_name: Intro2OSS
+site_description: 开源软件通识课程
+site_author: HUST Open Atom Club
+site_url: https://oss.openatom.club/
+repo_name: hust-open-atom-club/intro2oss
+repo_url: https://github.com/hust-open-atom-club/intro2oss
+copyright: Brought to you by <a href="https://hust.openatom.club/">HUST Open Atom Club</a>. Available freely under the MIT license.
+
+extra_css:
+  - stylesheets/extra.css
+
+plugins:
+  - mkdocs-audio
+  - md-preview:
+      enable: true
+      left_title: "Markdown 源码"
+      right_title: "渲染输出"
+
+theme:
+  name: 'material'
+  language: 'zh'
+  logo: assets/logo.png
+  favicon: assets/favicon.png
+  font: false
+  palette:
+    - scheme: default
+      # media: "(prefers-color-scheme: light)"
+      primary: custom
+      accent: custom
+      # toggle:
+      #   icon: material/weather-night
+      #   name: 切换至深色模式
+    # - scheme: slate
+    #   media: "(prefers-color-scheme: dark)"
+    #   primary: blue
+    #   accent: blue
+    #   toggle:
+    #     icon: material/weather-sunny
+    #     name: 切换至浅色模式
+  icon:
+    repo: octicons/mark-github-16
+  features:
+    - content.code.copy
+    - content.tooltips
+    - navigation.footer
+    - navigation.indexes
+    - navigation.top
+    - navigation.tracking
+
+markdown_extensions:
+  - admonition
+  - footnotes
+  - markdown.extensions.def_list
+  - md_in_html
+  - pymdownx.arithmatex:
+      generic: true
+  - pymdownx.tilde
+  - pymdownx.details
+  - pymdownx.tabbed
+  - pymdownx.extra
+  - pymdownx.inlinehilite
+  - attr_list
+  - pymdownx.emoji:
+      emoji_index: !!python/name:material.extensions.emoji.twemoji
+      emoji_generator: !!python/name:material.extensions.emoji.to_svg
+  - pymdownx.highlight:
+      anchor_linenums: true
+  - pymdownx.inlinehilite
+  - pymdownx.snippets:
+      auto_append:
+        - includes/man.md
+        - includes/authors.md
+  - pymdownx.superfences:
+      custom_fences:
+        - name: mermaid
+          class: mermaid
+          format: !!python/name:pymdownx.superfences.fence_code_format
+  - toc:
+      permalink: true
+  - pymdownx.tasklist:
+      custom_checkbox: true
+
+extra:
+  social:
+    - icon: octicons/globe-16
+      link: https://hust.openatom.club/
+    - icon: octicons/mark-github-16
+      link: https://github.com/hust-open-atom-club/
+
+nav:
+  - 欢迎来到开源世界: index.md
+  - 零、引言:
+    - 导览: ch0/index.md
+  - 一、开源简介:
+    - 导览: ch1/index.md
+    - 第一节 什么是开源: ch1/sec1/what-is-oss.md
+    - 第二节 开源简史: ch1/sec2/history-of-oss.md
+    - 第三节 为什么要开源: ch1/sec3/why-oss.md
+    - 第四节 怎么做开源: ch1/sec4/how-to-oss.md
+  - 二、开源基础理论:
+    - 导览: ch2/index.md
+    - 第一节 名词解释:
+      - 开源生态系统: ch2/sec1/1-open_source_ecosystem.md
+      - 开源许可证详解: ch2/sec1/2-open_source_licenses.md
+    - 第二节 开源文化: ch2/sec2/culture.md
+    - 第三节 开源世界规则:
+      - 开源项目的运作规则: ch2/sec3/1-project-operations.md
+      - 贡献与回报: ch2/sec3/2-contributions-rewards.md
+      - 开源项目的法律与合规: ch2/sec3/3-legal-and-compliance.md  
+  - 三、开源贡献基础技能:
+    - 导览: ch3/index.md
+    - 第零节 Markdown 基础:
+      - Markdown 基本语法: ch3/sec0/1-basic.md
+      - Markdown 进阶用法: ch3/sec0/2-advanced.md
+    - 第一节 Git 训练营:
+      - 导学阶段:
+        - Git 简介: ch3/sec1/subsec1/1-git-introduction.md
+        - 代码托管平台简介: ch3/sec1/subsec1/2-code-hosting-platforms.md
+        - 注册并熟悉代码托管平台: ch3/sec1/subsec1/3-practice-code-hosting-platforms.md
+        - 创建并管理仓库: ch3/sec1/subsec1/4-create-repo.md
+        - 开源许可证选择指南: ch3/sec1/subsec1/5-open_source_License.md
+        - GitHub Fork 简明解析: ch3/sec1/subsec1/6-fork.md
+      - 基础阶段:
+        - Git 基础配置: ch3/sec1/subsec2/1-basic-configuration.md
+        - 暂存区操作: ch3/sec1/subsec2/2-staging.md
+        - 暂存区操作(续): ch3/sec1/subsec2/3-reset-diff-and-commit.md
+        - 如何写好一个 commit message: ch3/sec1/subsec2/6-commit-message.md
+      - 专业阶段:
+        - Git Rebase 与 Git Merge 的使用与区别: ch3/sec1/subsec3/1-rebase-merge.md
+        - Git 分布式版本控制工作原理:  ch3/sec1/subsec3/2-Control-Process.md
+        - Git 辅助本地项目开发: ch3/sec1/subsec3/3-help-open.md
+        - Git 进阶理论: ch3/sec1/subsec3/5-advanced-theory.md
+        - 参与开源项目: ch3/sec1/subsec3/7-participate-in.md
+      - 项目阶段:
+        - 贡献一个 Linux patch: ch3/sec1/subsec4/1-linux-patch.md
+        - 团队项目合作: ch3/sec1/subsec4/2-teamwork.md
+    - 第二节 Linux 训练营:
+      - 其他命令与工具: ch3/sec2/4-other-commands.md
+    - 第三节 Docker 训练营:
+      - Docker 基础: ch3/sec3/1_foundation.md
+      - 自定义镜像之 Dockerfile 详解: ch3/sec3/2_dockerfile.md
+      - Docker 存储管理详解: ch3/sec3/3_storage.md
+      - Docker 网络管理详解: ch3/sec3/4_network.md
+      - Docker 容器监控与管理: ch3/sec3/5_management.md
+    - 第四节 QEMU 训练营:
+      - 参与 QEMU 邮件列表讨论: ch3/sec4/1-qemu-send-email.md
+    - 第五节 杂项:
+      - 常用的开源工具: ch3/sec5/1-useful-oss.md
+  - 四、领导开源社区:
+    - 第四章 导览: ch4/index.md
+  - 附录:
+    - 关于本教程: ch99/abouts.md
+
+extra_javascript:
+  - scripts/mathjax.js
+  - https://unpkg.com/mathjax@3/es5/tex-mml-chtml.js

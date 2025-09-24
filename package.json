@@ -1,0 +1,20 @@
+{
+  "name": "intro2oss",
+  "version": "1.0.0",
+  "description": "欢迎大家来到华科开放原子开源俱乐部的《开源软件通识课程》内部培训课程。本课程将秉持“以开源方式来建设开源课程”的指导方针，带同学们一起畅游开源软件的海洋。",
+  "main": "index.js",
+  "directories": {
+    "doc": "docs"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "lint:md": "markdownlint-cli2 **/*.md #node_modules #site",
+    "fix:md": "markdownlint-cli2-fix **/*.md #node_modules #site"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "markdownlint-cli2": "^0.18.1"
+  }
+}
